@@ -9,13 +9,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  ?>
 <main>
     <header>
-        <div class="container">
+        <div class="container" id="#pjax-load">
             <h1>Articles</h1>
             <p class="subtitle">All articles that I write.</p>
         </div>
     </header>
     <section>
-        <div class="container">
+        <div class="container" id="#pjax-load">
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
             <input id="search-query" type="text" id="s" name="s" class="text"  placeholder="Search for anything...">
             </form>

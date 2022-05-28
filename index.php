@@ -12,7 +12,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');
  ?>
 <main>
-    <div class="container">
+    <div class="container"  id="#pjax-load">
     <section class="my">
         <div class="content">
             <p>
@@ -31,8 +31,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <?php endif; ?>
     </section>
     </div>
- <div class="container">
-     <section>
+ <div class="container"  id="#pjax-load">
+    <section>
          <h2>Latest Articles<?php if ($this->options->articles): ?><a class=section-button href="<?php $this->options->articles() ?>">View all</a><?php else: ?><?php endif; ?></h2>
          <div class="posts">
              <?php while($this->next()): ?>

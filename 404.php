@@ -2,7 +2,7 @@
 <?php $this->need('header.php'); ?>
 <main>
     <section>
-        <div class="container">
+        <div class="container" id="#pjax-load">
             <h1><span class="count">404</span> NOT FOUND</h1>
         </div>
     </section>

@@ -38,7 +38,7 @@
 </head>
 <body class="dark">
     <nav class="navbar">
-    <div class="container">
+    <div class="container" id="#pjax-load">
         <div class="flex">
             <div>
                 <a class="brand" href="<?php $this->options->siteUrl(); ?>">

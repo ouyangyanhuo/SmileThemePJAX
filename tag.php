@@ -2,13 +2,13 @@
 <?php $this->need('header.php'); ?>
 <main>
     <header>
-        <div class="container">
+        <div class="container" id="#pjax-load">
             <h1>标签</h1>
             <p class="subtitle">这是<span class="count"><?php $this->archiveTitle(array('tag' => _t('%s'),), ''); ?></span>标签下所有的文章。</p>
         </div>
     </header>
     <section>
-        <div class="container">
+        <div class="container" id="#pjax-load">
             <section>
                 <section>
                     <div class="posts">
@@ -26,7 +26,7 @@
                 </section>
             </section>
         </div>
-        <div class="container">
+        <div class="container" id="#pjax-load">
             <nav class="flex container suggested">
                     <?php $this->pageLink('上一页','prev'); ?>
                     <?php $this->pageLink('下一页','next'); ?>
