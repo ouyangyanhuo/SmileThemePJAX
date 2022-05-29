@@ -1,10 +1,10 @@
 <?php
 /**
- * Build-20220528-PjaxDev SMILETHEME!
+ * 移植自<a href="https://limxw.com/" target="_blank">WingLim</a>的<a href="https://github.com/WingLim/hugo-tania" target="_blank">hugo-tania</a>主题，在其基础上进行了深度修改的Smiletheme或许是你在Typecho上最好的选择
  * 
  * @package Smile Theme
  * @author Magneto
- * @version Build-22530-PjaxDev
+ * @version Build-22531-PjaxDev
  * @link https://www.fmcf.cc
  */
 
@@ -32,7 +32,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     </section>
     </div>
  <div class="container">
-    <section>
+     <section>
          <h2>Latest Articles<?php if ($this->options->articles): ?><a class=section-button href="<?php $this->options->articles() ?>">View all</a><?php else: ?><?php endif; ?></h2>
          <div class="posts">
              <?php while($this->next()): ?>
