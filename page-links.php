@@ -9,7 +9,7 @@
 <?php $this->need('header.php'); ?>
 <main>
     <header>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <h1><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -20,7 +20,7 @@
             <p class="subtitle">这是一个<span class="count">友链</span>页面</p>
         </div>
     </header>
-    <div class="container" id="#pjax-load">
+    <div class="container">
         <div class="article-post">
             <?php if ($this->options->fancybox): ?>
             <?php
@@ -45,11 +45,11 @@
             </div>
     </div>
     <?php if ($this->options->TheComments): ?>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <?php $this->need('comments.php'); ?>
         </div>
         <?php else: ?>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <div class="alert info">已关闭全局评论。</div>
         </div>
         <?php endif; ?>

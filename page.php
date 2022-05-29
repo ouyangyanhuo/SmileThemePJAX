@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 <main>
-    <div class="container" id="#pjax-load">
+    <div class="container">
         <article>
             <header class="article-header">
                 <div class="thumb">
@@ -36,7 +36,7 @@
             <?php endif; ?>
         </div>
         <?php if ($this->options->TheComments): ?>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <?php $this->need('comments.php'); ?>
         </div>
         <?php else: ?>

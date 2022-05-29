@@ -2,13 +2,13 @@
 <?php $this->need('header.php'); ?>
 <main>
     <header>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <h1>搜索</h1>
             <p class="subtitle">包含关键字<span class="count"><?php $this->archiveTitle(array('search' =>  _t('%s')), ''); ?></span>的所有文章。</p>
         </div>
     </header>
     <section>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
             <input id="search-query" type="text" id="s" name="s" class="text"  placeholder="Search for anything...">
             </form>

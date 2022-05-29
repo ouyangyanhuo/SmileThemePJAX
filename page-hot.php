@@ -12,12 +12,12 @@
 <?php $this->need('header.php'); ?>
 <main>
     <header>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <h1>热门文章</h1>
             <p class="subtitle">这里是<span class="count">热门文章</span></p>
         </div>
     </header> 
-    <div class="container" id="#pjax-load">
+    <div class="container">
      <section>
          <h2>Hot Articles</h2>
          <div class="posts">

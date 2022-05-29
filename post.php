@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 <main>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <article>
                 <header class="article-header">
                     <div class="thumb">
@@ -40,7 +40,7 @@
             </div>
         </div>
         <?php if ($this->options->TheComments): ?>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <?php $this->need('comments.php'); ?>
         </div>
         <?php else: ?>
@@ -48,7 +48,7 @@
             <div class="alert info">已关闭全局评论。</div>
         </div>
         <?php endif; ?>
-        <div class="container" id="#pjax-load">
+        <div class="container">
             <nav class="flex container suggested">
                     上一篇
                     <?php $this->thePrev('%s', '<a href="#">没有了</a>');?>
