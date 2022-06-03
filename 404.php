@@ -3,7 +3,7 @@
 <main>
     <section>
         <div class="container">
-            <h1><span class="count">404</span> NOT FOUND</h1>
+            <h1><span class="count">404</span><p>NOT FOUND</p></h1>
         </div>
     </section>
 </main>

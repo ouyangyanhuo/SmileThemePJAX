@@ -6,7 +6,7 @@
  */
 ?>
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('/layout/header.php'); ?>
 <main>
     <header>
         <div class="container">
@@ -54,4 +54,4 @@
         </div>
         <?php endif; ?>
 </main>
-<?php $this->need('footer.php'); ?>
+<?php $this->need('/layout/footer.php'); ?>

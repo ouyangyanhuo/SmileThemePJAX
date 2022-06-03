@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('/layout/header.php'); ?>
 <main>
         <div class="container">
             <article>
@@ -48,13 +48,5 @@
             <div class="alert info">已关闭全局评论。</div>
         </div>
         <?php endif; ?>
-        <div class="container">
-            <nav class="flex container suggested">
-                    上一篇
-                    <?php $this->thePrev('%s', '<a href="#">没有了</a>');?>
-            
-                    下一篇
-                    <?php $this->theNext('%s', '<a href="#">没有了</a>');?>
-            </nav>
-        </div>
-<?php $this->need('footer.php'); ?>
+        <?php $this->need('/layout/next.php'); ?>
+<?php $this->need('/layout/footer.php'); ?>

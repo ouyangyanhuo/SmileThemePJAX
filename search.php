@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('/layout/header.php'); ?>
 <main>
     <header>
         <div class="container">
@@ -29,12 +29,7 @@
                 </section>
             </section>
         </div>
-        <div class="container">
-            <nav class="flex container suggested">
-                    <?php $this->pageLink('上一页','prev'); ?>
-                    <?php $this->pageLink('下一页','next'); ?>
-            </nav>
-        </div>
+        <?php $this->need('/layout/next.php'); ?>
     </section>
 </main>
-<?php $this->need('footer.php'); ?>
+<?php $this->need('/layout/footer.php'); ?>

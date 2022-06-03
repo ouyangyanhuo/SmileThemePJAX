@@ -5,7 +5,7 @@
  * @package custom
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
- $this->need('header.php');
+ $this->need('/layout/header.php');
  ?>
 <main>
     <header>
@@ -46,4 +46,4 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
     </section>
 </main>
-<?php $this->need('footer.php'); ?>
+<?php $this->need('/layout/footer.php'); ?>

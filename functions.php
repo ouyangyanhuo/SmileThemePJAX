@@ -81,6 +81,18 @@ function themeConfig($form) {
     );
     $form->addInput($WordCount);
     
+    $WebPjax = new Typecho_Widget_Helper_Form_Element_Radio(
+        'WebPjax',
+        array(
+            1 => _t('开启'),
+            0 => _t('关闭')
+        ),
+        1,
+        _t('PJAX'),
+        _t('全站PJAX无刷新加载，评论区暂不支持PJAX')
+    );
+    $form->addInput($WebPjax);
+
     /* Link */
     $TheNotice = new Typecho_Widget_Helper_Form_Element_Text('TheNotice', NULL, NULL, _t('<h2>Link</h2>'));
     $TheNotice->input->setAttribute('style', 'display:none');
@@ -249,79 +261,26 @@ function themeConfig($form) {
 	
 	
 }
-/* 热门文章 */
-class Widget_Post_hot extends Widget_Abstract_Contents
+/* 功能预写入 实现QQ邮箱识别生成头像地址
+function isqq($email)
 {
-    public function __construct($request, $response, $params = NULL)
-    {
-        parent::__construct($request, $response, $params);
-        $this->parameter->setDefault(array('pageSize' => $this->options->commentsListSize, 'parentId' => 0, 'ignoreAuthor' => false));
+    if ($email) {
+        if (strpos($email, "@qq.com") !== false) {
+            $email = str_replace('@qq.com', '', $email);
+            if(is_numeric($email)){
+            echo "//q1.qlogo.cn/g?b=qq&nk=" . $email . "&";
+            }else{
+                $mmail = $email.'@qq.com';
+                $email = md5($mmail);
+                echo "//cdn.v2ex.com/gravatar/" . $email . "?";
+            }
+            
+        } else {
+            $email = md5($email);
+            echo "//cdn.v2ex.com/gravatar/" . $email . "?";
+        }
+    } else {
+        echo "//cdn.v2ex.com/gravatar/null?";
     }
-    public function execute()
-    {
-        $select  = $this->select()->from('table.contents')
-            ->where("table.contents.password IS NULL OR table.contents.password = ''")
-            ->where('table.contents.status = ?', 'publish')
-            ->where('table.contents.created <= ?', time())
-            ->where('table.contents.type = ?', 'post')
-            ->limit($this->parameter->pageSize)
-            ->order('table.contents.views', Typecho_Db::SORT_DESC);
-        $this->db->fetchAll($select, array($this, 'push'));
-    }
 }
-/* 验证系统 */
-function themeInit($comment){
-$comment = spam_protection_pre($comment, $post, $result);
-}
-function spam_protection_math(){
-    $num1=rand(1,100);
-    $num2=rand(1,100);
-    echo "<label class=\"required\">请输入 <code>$num1</code> + <code>$num2</code> 的计算结果：</label>";
-    echo "<input type=\"text\" name=\"sum\" class=\"text\" value=\"\" placeholder=\"验证码\">\n";
-    echo "<input type=\"hidden\" name=\"num1\" value=\"$num1\">\n";
-    echo "<input type=\"hidden\" name=\"num2\" value=\"$num2\">";
-}
-function spam_protection_pre($comment, $post, $result){
-    $sum=$_POST['sum'];
-    switch($sum){
-        case $_POST['num1']+$_POST['num2']:
-        break;
-        case null:
-        throw new Typecho_Widget_Exception(_t('对不起: 请输入验证码。<a href="javascript:history.back(-1)">返回上一页</a>','评论失败'));
-        break;
-        default:
-        throw new Typecho_Widget_Exception(_t('对不起: 验证码错误，请<a href="javascript:history.back(-1)">返回</a>重试。','评论失败'));
-    }
-    return $comment;
-}
-/* 短代码 */
-function getContentTest($content) {
-    /* MARK功能 */
-    $pattern = '/\[(mark)\](.*?)\[\s*\/\1\s*\]/';
-    $replacement = '<mark>$2</mark>';
-    $content = preg_replace($pattern, $replacement, $content);
-    /* 提示功能 */
-    $pattern = '/\[(info)\](.*?)\[\s*\/\1\s*\]/';
-    $replacement = '<div class="alert info">$2</div>';
-    $content = preg_replace($pattern, $replacement, $content);
-    /* Keybord */
-    $pattern = '/\[(kbd)\](.*?)\[\s*\/\1\s*\]/';
-    $replacement = '<kbd>$2</kbd>';
-    $content = preg_replace($pattern, $replacement, $content);
-    /* 上标 */
-    $pattern = '/\[(sup)\](.*?)\[\s*\/\1\s*\]/';
-    $replacement = '<sup>$2</sup>';
-    $content = preg_replace($pattern, $replacement, $content);
-    /* 下标 */
-    $pattern = '/\[(sub)\](.*?)\[\s*\/\1\s*\]/';
-    $replacement = '<sub>$2</sub>';
-    $content = preg_replace($pattern, $replacement, $content);
-    /* 返回值 */
-    return $content;
-}
-/* 字数统计 */
-function word_count($cid){
-	$db = Typecho_Db::get ();
-	$rs = $db->fetchRow($db->select('table.contents.text')->from('table.contents')->where('table.contents.cid=?',$cid)->order ('table.contents.cid',Typecho_Db::SORT_ASC)->limit (1));
-	return mb_strlen($rs['text'], 'UTF-8');
-}
+*/
