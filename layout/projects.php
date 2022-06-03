@@ -27,7 +27,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="flex">
-                    <a href="<?php if ($this->options->Project_1_URL): ?><?php $this->options->Project_1_URL() ?><?php else: ?><?php endif; ?>" class="button" target="_blank" rel="noreferrer">Source</a>
+                    <a href="<?php if ($this->options->Project_1_URL): ?><?php $this->options->Project_1_URL() ?><?php endif; ?>" class="button" target="_blank" rel="noreferrer">Source</a>
                 </div>
             </div>
             <?php endif; ?>
@@ -57,7 +57,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="flex">
-                    <a href="<?php if ($this->options->Project_2_URL): ?><?php $this->options->Project_2_URL() ?><?php else: ?><?php endif; ?>" class="button" target="_blank" rel="noreferrer">Source</a>
+                    <a href="<?php if ($this->options->Project_2_URL): ?><?php $this->options->Project_2_URL() ?><?php endif; ?>" class="button" target="_blank" rel="noreferrer">Source</a>
                 </div>
             </div>
             <?php endif; ?>

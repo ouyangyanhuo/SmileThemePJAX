@@ -24,16 +24,16 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </p>
             <?php if ($this->options->Icons): ?>
             <div class="bio-social">
-            <a href="<?php if ($this->options->icon_1_URL): ?><?php $this->options->icon_1_URL() ?><?php else: ?><?php $this->options->siteUrl(); ?><?php endif; ?>" target="_blank"><?php if ($this->options->icon_1): ?><?php $this->options->icon_1() ?><?php else: ?><?php endif; ?></a>
-            <a href="<?php if ($this->options->icon_2_URL): ?><?php $this->options->icon_2_URL() ?><?php else: ?><?php $this->options->siteUrl(); ?><?php endif; ?>" target="_blank"><?php if ($this->options->icon_2): ?><?php $this->options->icon_2() ?><?php else: ?><?php endif; ?></a>
-            <a href="<?php if ($this->options->icon_3_URL): ?><?php $this->options->icon_3_URL() ?><?php else: ?><?php $this->options->siteUrl(); ?><?php endif; ?>" target="_blank"><?php if ($this->options->icon_2): ?><?php $this->options->icon_3() ?><?php else: ?><?php endif; ?></a>
+            <a href="<?php if ($this->options->icon_1_URL): ?><?php $this->options->icon_1_URL() ?><?php else: ?><?php $this->options->siteUrl(); ?><?php endif; ?>" target="_blank"><?php if ($this->options->icon_1): ?><?php $this->options->icon_1() ?><?php endif; ?></a>
+            <a href="<?php if ($this->options->icon_2_URL): ?><?php $this->options->icon_2_URL() ?><?php else: ?><?php $this->options->siteUrl(); ?><?php endif; ?>" target="_blank"><?php if ($this->options->icon_2): ?><?php $this->options->icon_2() ?><?php endif; ?></a>
+            <a href="<?php if ($this->options->icon_3_URL): ?><?php $this->options->icon_3_URL() ?><?php else: ?><?php $this->options->siteUrl(); ?><?php endif; ?>" target="_blank"><?php if ($this->options->icon_2): ?><?php $this->options->icon_3() ?><?php endif; ?></a>
             </div>
             <?php endif; ?>
     </section>
     </div>
  <div class="container">
      <section>
-         <h2>Latest Articles<?php if ($this->options->articles): ?><a class=section-button href="<?php $this->options->articles() ?>">View all</a><?php else: ?><?php endif; ?></h2>
+         <h2>Latest Articles<?php if ($this->options->articles): ?><a class=section-button href="<?php $this->options->articles() ?>">View all</a><?php endif; ?></h2>
          <div class="posts">
              <?php while($this->next()): ?>
              <div class="post">
