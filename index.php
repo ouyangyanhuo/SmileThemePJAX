@@ -1,10 +1,18 @@
 <?php
+/*
+ * @Author: ouyangyanhuo ouyangyanhuo@vip.qq.com
+ * @Date: 2022-05-28 18:43:08
+ * @LastEditors: ouyangyanhuo ouyangyanhuo@vip.qq.com
+ * @LastEditTime: 2022-07-23 20:04:13
+ * @FilePath: \SmileThemePJAX\index.php
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 /**
  * 移植自<a href="https://limxw.com/" target="_blank">WingLim</a>的<a href="https://github.com/WingLim/hugo-tania" target="_blank">hugo-tania</a>主题，在其基础上进行了深度修改的Smiletheme或许是你在Typecho上最好的选择
  * 
  * @package Smile Theme
  * @author Magneto
- * @version Build-22603-PjaxDev
+ * @version Build
  * @link https://www.fmcf.cc
  */
 
